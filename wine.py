@@ -70,4 +70,8 @@ if __name__ == "__main__":
     os.environ['MLFLOW_TRACKING_USERNAME'] = "h.hurchand"
     os.environ['MLFLOW_TRACKING_PASSWORD'] = "c849831fd1e33c252105db9c11369695ee50a48a"
     mlflow.set_tracking_uri("https://dagshub.com/h.hurchand/dagshub_integration.mlflow")
-    mlflow.sklearn.autolog()
+    mlflow.log_param("alpha", alpha)
+    mlflow.log_param("l1_ratio", l1_ratio)
+    mlflow.log_metric("rmse", rmse)
+    mlflow.log_metric("r2", r2)
+    mlflow.log_metric("mae", mae)
